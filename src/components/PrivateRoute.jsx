@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { LoginContext } from '../App';
 
 const PrivateRoute = ({ Component }) => {

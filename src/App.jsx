@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { HashRouter, Link, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
@@ -11,7 +11,7 @@ const App = () => {
   const [login, setLogin] = useState(false);
   return (
     <LoginContext.Provider value={[login, setLogin]}>
-      <BrowserRouter>
+      <HashRouter>
         <Link to='/'>/Home</Link> &nbsp;
 
         <Link to='/privateroute'> Secret Video</Link> &nbsp;
@@ -22,7 +22,7 @@ const App = () => {
           <Route path='/login' element={<Login></Login>} />
           <Route path='/privateroute' element={<PrivateRoute Component={<SecretVideo />} />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </LoginContext.Provider>
   );
 };
