@@ -13,7 +13,7 @@ const PrivateRoute = ({ Component }) => {
         }
     }, [location, login, navigate]);
 
-    return login ? Component : null;
+    return login ? <Component /> : null;
 };
 
 export default PrivateRoute;

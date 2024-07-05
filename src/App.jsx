@@ -20,7 +20,7 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/login' element={<Login></Login>} />
-          <Route path='/privateroute' element={<PrivateRoute Component={<SecretVideo />} />} />
+          <Route path='/privateroute' element={<PrivateRoute Component={SecretVideo} />} />
         </Routes>
       </HashRouter>
     </LoginContext.Provider>
