@@ -17,15 +17,15 @@ const Login = () => {
             <input type="password" name="" id="" onChange={(event) => setPassword(event.target.value)} />
             <br />
             <button onClick={() => {
-                setLogin(true);
+
                 setLoginSuccess('Login Successful')
                 setTimeout(() => {
                     setLoginSuccess('')
                 }, 2000)
+                setLogin(true);
                 if (location?.state?.from) {
                     navigate(location?.state?.from);
                 }
-
             }}>Login</button>
             <button onClick={() => {
 

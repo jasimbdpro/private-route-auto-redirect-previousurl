@@ -6,10 +6,10 @@ const PrivateRoute = ({ Component }) => {
     const [login] = useContext(LoginContext);
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(login)
+
     useEffect(() => {
         if (!login) {
-            navigate('/login', { state: { from: location } })
+            navigate('/login', { state: { from: location } }); // Corrected navigation
         }
     }, [location, login, navigate]);
 
